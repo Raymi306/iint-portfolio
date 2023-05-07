@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+{% block preheader %}
+<div class="header-top-image">
+    {% set image = resize_image(path="/fresconew.png", height=200, width=200) %}
+    <img src="{{ image.url }}"></src>
+</div>
+{% endblock %}
+{% block header %}
+    <div class="title-nav-container">
+    <div class="header-title">
+        <h1>art</h1>
+    </div>
+{% include "include/nav.html" %}
+</div>
+{% endblock %}
+
+{% block content %}
+{{ section.content | safe }}
+{% endblock content %}

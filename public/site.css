@@ -1,0 +1,109 @@
+body {
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: Helvetica, serif;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.header-top-image {
+    height: 200px;
+    margin-bottom: 2%;
+}
+
+.header-top-image > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-nav-container {
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 0.3rem;
+}
+
+.content {
+    text-align: center;
+}
+
+.header-title-no-bg > h1 {
+    text-align: center;
+}
+
+.header-title {
+    background-color: #aa0303;
+    color: white;
+    padding: 0.3rem;
+    padding-top: 0.6rem;
+}
+
+.header-title > h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-bar {
+    position: relative;
+    background-color: #0b0b0b;
+    color: white;
+    padding: 0.3rem;
+    padding-top: 0.6rem;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: fit-content;
+}
+
+.nav-bar li {
+    font-weight: bold;
+    list-style: none;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    width: fit-content;
+}
+
+.nav-bar li > a {
+    display: flex;
+}
+
+.nav-bar a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.nav-bar a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.nav-seperate > .nav-bar {
+    border-radius: 28px;
+    overflow: hidden;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mock-image {
+    width: 240px;
+    height: 180px;
+    background-color: darkgray;
+    margin: 0.3rem;
+}

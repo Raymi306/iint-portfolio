@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="online portfolio of iint">
+  <link rel="stylesheet" href="/site.css">
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+	{% block preheader %}
+	{% endblock %}
+            {% block header %}
+            <h1>{{ config.title }}</h1>
+            {% endblock %}
+	</div>
+        {% block content %}
+        {% endblock %}
+    </div>
+  </section>
+</body>
+</html>
