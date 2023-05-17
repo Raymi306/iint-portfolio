@@ -101,9 +101,7 @@ body {
     justify-content: center;
 }
 
-.mock-image {
+.gallery > a {
     width: 240px;
     height: 180px;
-    background-color: darkgray;
-    margin: 0.3rem;
 }
