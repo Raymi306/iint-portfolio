@@ -72,6 +72,7 @@ body {
 
 .nav-bar li > a {
     display: flex;
+    
 }
 
 .nav-bar a:link {
