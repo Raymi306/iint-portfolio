@@ -1,15 +1,20 @@
 {% extends "base.html" %}
-{% block header %}
 
-<div class="nav-seperate">
-    {% include "include/nav.html" %}
-</div>
-<div class="header-title-no-bg">
-    <h1> {{ page.title }} </h1>
+{% block title %}{{ page.title }}{% endblock %}
+{% block preheader %}
+<div class="header-top-image">
+    {% set image = resize_image(path="/header.png", height=400, width=400) %}
+    <img src="{{ image.url }}" alt="an anatomically correct heart displaying text that reads 'monsterporn'; another line of text reads 'art by iiintangible'"></src>
 </div>
 {% endblock %}
+{% block header %}
+
+{% include "include/nav.html" %}
+
+{% endblock %}
+
 {% block content %}
 <div class="content">
-    {{ page.content | safe }}
+{{ page.content | safe }}
 </div>
 {% endblock content %}

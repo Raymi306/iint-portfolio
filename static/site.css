@@ -45,21 +45,20 @@ body {
 }
 
 .nav-bar {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #0b0b0b;
     color: white;
     padding: 0.3rem;
-    padding-top: 0.6rem;
+    margin-bottom: 10px;
 }
 
 .nav-bar ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
-    width: fit-content;
+    width: 100%;
+    line-height: 3rem;
 }
 
 .nav-bar li {
@@ -67,12 +66,13 @@ body {
     list-style: none;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
     width: fit-content;
 }
 
 .nav-bar li > a {
-    display: flex;
-    
+    display: block;
 }
 
 .nav-bar a:link {
@@ -85,12 +85,16 @@ body {
     color: inherit;
 }
 
-.nav-seperate > .nav-bar {
-    border-radius: 28px;
-    overflow: hidden;
-    width: fit-content;
+.nav-social-media {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0.7rem;
+}
+
+.nav-social-media > a {
+    display: flex;
+    padding: 0.3rem;
 }
 
 .gallery {
@@ -106,4 +110,28 @@ body {
 
 .content {
     text-align: center;
+}
+
+@media only screen and (min-width: 601px) {
+    .nav-bar {
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-bar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        width: fit-content;
+    }
+    .nav-bar li {
+        margin-right: 1rem;
+    }
+    .nav-bar li + li {
+        margin-top: 0;
+    }
+    .nav-social-media {
+        margin: 0;
+    }
 }
