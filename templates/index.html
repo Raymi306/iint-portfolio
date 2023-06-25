@@ -3,19 +3,18 @@
 {% block title %}{{ section.title }}{% endblock %}
 {% block preheader %}
 <div class="header-top-image">
-    {% set image = resize_image(path="/fresconew.png", height=200, width=200) %}
-    <img src="{{ image.url }}"></src>
+    {% set image = resize_image(path="/header.png", height=400, width=400) %}
+    <img src="{{ image.url }}" alt="an anatomically correct heart displaying text that reads 'monsterporn'; another line of text reads 'art by iiintangible'"></src>
 </div>
 {% endblock %}
 {% block header %}
-    <div class="title-nav-container">
-    <div class="header-title">
-        <h1>art</h1>
-    </div>
+
 {% include "include/nav.html" %}
-</div>
+
 {% endblock %}
 
 {% block content %}
+<div class="content">
 {{ section.content | safe }}
+</div>
 {% endblock content %}
