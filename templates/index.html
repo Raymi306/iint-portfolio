@@ -17,4 +17,17 @@
 <div class="content">
 {{ section.content | safe }}
 </div>
+<div class="gallery">
+  {% set gallery = get_section(path="gallery/_index.md") %}
+  {% for page in gallery.pages -%}
+    {% for asset in page.assets -%}
+        {%- if asset is matching("[.](jpg|png)$") -%}
+          {% set image = resize_image(path=asset, width=240, height=180) %}
+          <a href="{{ page.path }}">
+            <img src="{{ image.url }}" />
+          </a>
+        {%- endif %}
+    {%- endfor %}
+  {%- endfor %}
+</div>
 {% endblock content %}
