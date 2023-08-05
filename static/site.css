@@ -9,6 +9,11 @@ body {
     line-height: 1.7rem;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .header-top-image > img {
     display: block;
     margin-left: auto;
@@ -114,6 +119,37 @@ body {
 
 img.full {
     max-width: 100%;
+}
+
+.panel {
+    overflow: hidden;
+    margin-bottom: 1.3rem;
+    text-align: center;
+}
+
+div.panel-header-group h2, h3, h4, h5, h6 {
+    margin-top: 0.6rem;
+}
+
+.panel-header-group {
+    padding: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.panel-content {
+    padding: 1.3rem;
+}
+
+.panel-header-group a:link {
+    color: inherit;
+}
+
+.panel-header-group a:visited {
+    color: inherit;
+}
+
+.bottom-nav {
+    text-align: center;
 }
 
 @media only screen and (min-width: 601px) {

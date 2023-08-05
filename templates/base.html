@@ -2,25 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="online portfolio of iiint">
-  <link rel="stylesheet" href="/site.css">
-  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="online portfolio of iiint">
+    <link rel="stylesheet" href="/site.css">
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
-	{% block preheader %}
-	{% endblock %}
-            {% block header %}
-            <h1>{{ config.title }}</h1>
-            {% endblock %}
-	</div>
+    <section class="section">
+        <div class="header-top-image">
+            {% set image = resize_image(path="/header.png", height=400, width=400) %}
+            <img src="{{ image.url }}" alt="an anatomically correct heart displaying text that reads 'monsterporn'; another line of text reads 'art by iiintangible'"></src>
+        </div>
+        {% block header %}
+        {% include "include/nav.html" %}
+        {% endblock %}
         {% block content %}
         {% endblock %}
-    </div>
-  </section>
+    </section>
 </body>
 </html>
